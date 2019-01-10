@@ -2,7 +2,8 @@
 from data import stores
 from components import Cart
 
-site_name = ""  # Give your site a name
+
+site_name = "luz"  # Give your site a name
 
 def welcome():
     print("Welcome to %s\nFeel free to shop throughout the stores we have, and only checkout once!" % site_name)
@@ -12,18 +13,29 @@ def print_stores():
     prints the list of stores in a nice readable format.
     """
     # your code goes here!
+    for store in stores:
+        print store 
 
 def get_store(store_name):
     """
     receives a name for a store, and returns the store object with that name.
     """
-    # your code goes here!
+    # your code goes here:
+    for store in stores:
+        if store.name.lower() = store_name.lower():
+            return store
+        else:
+            return False
+
 
 def pick_store():
     """
     prints list of stores and prompts user to pick a store.
     """
     # your code goes here!
+
+
+    
 
 def pick_products(cart, picked_store):
     """
@@ -37,6 +49,7 @@ def shop():
     """
     cart = Cart()
     # your code goes here!
+
 
 def thank_you():
     print("Thank you for shopping with us at %s" % site_name)
